@@ -60,6 +60,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private CustomizeAbstractSecurityInterceptor securityInterceptor;
 
     @Bean
+    @Override
     public UserDetailsService userDetailsService() {
         //获取用户账号密码及权限信息
         return new UserDetailsServiceImpl();

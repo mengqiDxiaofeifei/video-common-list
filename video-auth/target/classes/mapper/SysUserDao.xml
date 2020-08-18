@@ -84,8 +84,8 @@
 
     <!--新增所有列-->
     <insert id="insert" keyProperty="id" useGeneratedKeys="true">
-        insert into sys_user(account, user_name, password, last_login_time, enabled, account_non_expired, account_non_locked, credentials_non_expired, create_time, update_time, create_user, update_user)
-        values (#{account}, #{userName}, #{password}, #{lastLoginTime}, #{enabled}, #{accountNonExpired}, #{accountNonLocked}, #{credentialsNonExpired}, #{createTime}, #{updateTime}, #{createUser}, #{updateUser})
+        insert into sys_user(account, user_name, password, last_login_time, enabled, account_non_expired, account_non_locked, credentials_non_expired, create_time, update_time, create_user, update_user,phone)
+        values (#{account}, #{userName}, #{password}, #{lastLoginTime}, #{enabled}, #{accountNonExpired}, #{accountNonLocked}, #{credentialsNonExpired}, #{createTime}, #{updateTime}, #{createUser}, #{updateUser},#{phone})
     </insert>
 
     <!--通过主键修改数据-->
@@ -128,6 +128,9 @@
             <if test="updateUser != null">
                 update_user = #{updateUser},
             </if>
+            <if test="phone != null">
+                phone = #{phone},
+            </if>
         </set>
         where id = #{id}
     </update>
@@ -140,5 +143,9 @@
     <!--根据用户名查询用户-->
     <select id="selectByName" resultMap="SysUserMap">
         select * from sys_user where account = #{userName};
+    </select>
+    <!--根据手机号查询用户-->
+    <select id="selectByPhone" resultMap="SysUserMap">
+        select * from sys_user where phone = #{phone};
     </select>
 </mapper>

@@ -27,6 +27,10 @@ public class SysUser implements Serializable {
      */
     private String password;
     /**
+     * 手机号
+     */
+     private String phone;
+    /**
      * 上一次登陆时间
      */
     private Date lastLoginTime;

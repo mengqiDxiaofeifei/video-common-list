@@ -70,5 +70,11 @@ public interface SysUserDao {
      * @return
      */
     SysUser selectByName(String userName);
-
+    /**
+     * 根据手机号查询用户
+     *
+     * @param userName
+     * @return
+     */
+    SysUser selectByPhone(String userName);
 }

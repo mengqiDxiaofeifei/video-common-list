@@ -59,5 +59,36 @@ public interface SysUserService {
      * @return
      */
     SysUser selectByName(String userName);
+    /**
+     * 根据手机号名查询用户
+     *
+     * @param userName
+     * @return
+     */
+    SysUser selectByPhone(String userName);
 
+    /**
+     * 校验短信验证码
+     *
+     * @param
+     * @return
+     */
+    Boolean checkSmsCode(String phone, String code);
+
+
+    /**
+     * 用户注册
+     *
+     * @param
+     * @return
+     */
+    void register(SysUser sysUser);
+
+    /**
+     * 判断手机号是否存在
+     *
+     * @param
+     * @return
+     */
+    Boolean checkPhone(String phone);
 }

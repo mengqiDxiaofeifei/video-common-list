@@ -3,6 +3,7 @@ package com.zhou.config.handler;
 import com.alibaba.fastjson.JSON;
 import com.zhou.common.response.Result;
 import com.zhou.common.response.ResultTool;
+import com.zhou.config.service.UserThreadLocal;
 import com.zhou.entity.SysUser;
 import com.zhou.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,8 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
         sysUser.setUpdateTime(new Date());
         sysUser.setUpdateUser(sysUser.getId());
         sysUserService.update(sysUser);
+        //存入ThreadLocal
+        UserThreadLocal.set(sysUser);
         Result result = ResultTool.success();
         httpServletResponse.setContentType("text/json;charset=utf-8");
         httpServletResponse.getWriter().write(JSON.toJSONString(result));
