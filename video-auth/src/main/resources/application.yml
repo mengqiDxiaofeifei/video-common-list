@@ -39,3 +39,14 @@ mybatis-plus:
     # 开启数据库与实体类中属性支持驼峰模式对应
     map-underscore-to-camel-case: true
     cache-enabled: false
+sdk:
+  tengxun:
+    accessKey:  #对象存储key
+    secretKey:  #对象存储secretKey
+    bucketImg: ap-nanjing
+    bucketVideo: ap-shanghai
+    bucketImgName: img-1258165247
+    bucketVideoName: video-1258165247
+    pathImg: https://img-1258165247.cos.ap-nanjing.myqcloud.com
+    pathVideo: https://video-1258165247.cos.ap-shanghai.myqcloud.com
+    qianzui:

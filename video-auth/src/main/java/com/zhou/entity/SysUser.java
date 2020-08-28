@@ -1,6 +1,7 @@
 package com.zhou.entity;
 
 import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -29,7 +30,7 @@ public class SysUser implements Serializable {
     /**
      * 手机号
      */
-     private String phone;
+    private String phone;
     /**
      * 上一次登陆时间
      */

@@ -91,4 +91,12 @@ public interface SysUserService {
      * @return
      */
     Boolean checkPhone(String phone);
+
+    /**
+     * 获取当前登录人
+     *
+     * @param
+     * @return
+     */
+    SysUser getUser();
 }

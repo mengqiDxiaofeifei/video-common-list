@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhou.dao.VideoDao">
+
+
+
+
+    <!--分页-->
+    <select id="getVideoList" parameterType="com.zhou.domain.vo.VideoVO"
+            resultType="com.zhou.domain.bo.VideoBO"
+            >
+            SELECT
+            tv.uuid,
+            tv.image,
+            tv.user_id,
+            tv.url,
+            tv.upload_time,
+            tv.title,
+            tv.details,
+            su.account
+            FROM
+            tb_video tv
+            LEFT JOIN sys_user su ON su.id = tv.user_id
+            WHERE
+            tv.STATUS = 1
+            AND su.enabled = 1
+            ORDER BY
+            tv.create_time DESC
+    </select>
+</mapper>

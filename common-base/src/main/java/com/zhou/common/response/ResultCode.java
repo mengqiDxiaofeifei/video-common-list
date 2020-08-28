@@ -31,9 +31,17 @@ public enum ResultCode {
     USER_ACCOUNT_ALREADY_EXIST(2008, "账号已存在"),
     USER_ACCOUNT_USE_BY_OTHERS(2009, "账号下线"),
     USER_ACCOUNT_USE_EXIST(2010, "用户名已存在"),
+    USER_PHONE_USE_EXIST(2011, "手机号已被注册"),
+    USER_PHONE_CODE_ERROR_EXIST(2012, "手机号验证码有误"),
+    USER_CURRENT_ACCOUNT_NOT_EXIST(2013, "当前登录用户不存在"),
 
     /* 业务错误 */
     NO_PERMISSION(3001, "没有权限"),
+
+
+
+    /* 腾讯 */
+    TENGXUN_UPLOAD_EXPETION(4001, "文件上传异常"),
 
     ;
 

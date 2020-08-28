@@ -1,10 +1,11 @@
 package com.zhou.dao;
 
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.zhou.entity.SendCode;
 import org.apache.ibatis.annotations.Select;
 
-public interface SendCodeDao {
+public interface SendCodeDao extends BaseMapper<SendCode> {
 
     /**
      * 新增数据

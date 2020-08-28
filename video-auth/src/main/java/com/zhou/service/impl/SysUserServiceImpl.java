@@ -9,6 +9,8 @@ import com.zhou.entity.SendCode;
 import com.zhou.entity.SysUser;
 import com.zhou.entity.SysUserRole;
 import com.zhou.service.SysUserService;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -124,6 +126,7 @@ public class SysUserServiceImpl implements SysUserService {
             return true;
         }
         return false;
+
     }
 
     /**
@@ -135,7 +138,7 @@ public class SysUserServiceImpl implements SysUserService {
     @Transactional(rollbackFor = Exception.class)
     public void register(SysUser sysUser) {
         sysUser.setUpdateTime(new Date());
-        sysUser.setUserName(sysUser.getAccount());
+        sysUser.setAccount(sysUser.getUserName());
         sysUser.setLastLoginTime(new Date());
         sysUser.setCreateTime(new Date());
         sysUser.setAccountNonExpired(true);
@@ -155,5 +158,11 @@ public class SysUserServiceImpl implements SysUserService {
     public Boolean checkPhone(String phone) {
         SysUser sysUser = sysUserDao.selectByPhone(phone);
         return sysUser == null ? true : false;
+    }
+
+    @Override
+    public SysUser getUser() {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return sysUserDao.selectByName(user.getUsername());
     }
 }

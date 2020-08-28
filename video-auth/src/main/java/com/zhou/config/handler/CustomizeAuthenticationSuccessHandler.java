@@ -40,8 +40,6 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
         sysUser.setUpdateTime(new Date());
         sysUser.setUpdateUser(sysUser.getId());
         sysUserService.update(sysUser);
-        //存入ThreadLocal
-        UserThreadLocal.set(sysUser);
         Result result = ResultTool.success();
         httpServletResponse.setContentType("text/json;charset=utf-8");
         httpServletResponse.getWriter().write(JSON.toJSONString(result));
