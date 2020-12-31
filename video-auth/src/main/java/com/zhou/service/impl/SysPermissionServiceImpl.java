@@ -3,87 +3,125 @@ package com.zhou.service.impl;
 import com.zhou.dao.SysPermissionDao;
 import com.zhou.entity.SysPermission;
 import com.zhou.service.SysPermissionService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import javax.annotation.Resource;
+
 import java.util.List;
 
 /**
- *@Description 权限表(SysPermission)表服务实现类
- *@Author houjun
- *@Date 2020/5/16 17:28
- *@since:
- *@copyright:
+ * (SysPermission)表服务实现类
+ *
+ * @author makejava
+ * @since 2020-12-31 10:57:28
  */
 @Service("sysPermissionService")
 public class SysPermissionServiceImpl implements SysPermissionService {
-    @Resource
+
+    /**
+     * dao引入
+     */
+    @Autowired
     private SysPermissionDao sysPermissionDao;
 
-    /**
-     * 通过ID查询单条数据
-     *
-     * @param id 主键
-     * @return 实例对象
-     */
-    @Override
-    public SysPermission queryById(Integer id) {
-        return this.sysPermissionDao.queryById(id);
-    }
-
-    /**
-     * 查询多条数据
-     *
-     * @param offset 查询起始位置
-     * @param limit  查询条数
-     * @return 对象列表
-     */
-    @Override
-    public List<SysPermission> queryAllByLimit(int offset, int limit) {
-        return this.sysPermissionDao.queryAllByLimit(offset, limit);
-    }
 
     /**
      * 新增数据
      *
-     * @param sysPermission 实例对象
-     * @return 实例对象
+     * @param source 数据对象
+     * @return int
      */
     @Override
-    public SysPermission insert(SysPermission sysPermission) {
-        this.sysPermissionDao.insert(sysPermission);
-        return sysPermission;
+    public int insert(SysPermission source) {
+        return sysPermissionDao.insert(source);
     }
 
     /**
-     * 修改数据
+     * 单个删除
      *
-     * @param sysPermission 实例对象
-     * @return 实例对象
+     * @param id id
+     * @return int
      */
     @Override
-    public SysPermission update(SysPermission sysPermission) {
-        this.sysPermissionDao.update(sysPermission);
-        return this.queryById(sysPermission.getId());
+    public int deleteOne(Object id) {
+        return sysPermissionDao.deleteOne(id);
     }
 
     /**
-     * 通过主键删除数据
+     * 删除
      *
-     * @param id 主键
-     * @return 是否成功
+     * @param condition 删除条件
+     * @return int
      */
     @Override
-    public boolean deleteById(Integer id) {
-        return this.sysPermissionDao.deleteById(id) > 0;
+    public int delete(SysPermission condition) {
+        return sysPermissionDao.deleteByCondition(condition);
     }
 
+    /**
+     * 单个查询
+     *
+     * @param id id
+     * @return 对象
+     */
     @Override
-    public List<SysPermission> selectListByUser(Integer userId) {
-        return sysPermissionDao.selectListByUser(userId);
+    public SysPermission selectOne(int id) {
+        return sysPermissionDao.selectOne(id);
     }
 
+    /**
+     * 单个查询
+     * 需要注意为伪单个查询，通过下标获取。注意使用场景
+     *
+     * @param condition 查询条件
+     * @return 单个对象
+     */
     @Override
-    public List<SysPermission> selectListByPath(String path) {
-        return sysPermissionDao.selectListByPath(path);
+    public SysPermission selectOne(SysPermission condition) {
+        return sysPermissionDao.selectAllByCondition(condition).get(0);
+    }
+
+    /**
+     * 查询全部-无条件
+     *
+     * @return 所有数据
+     */
+    @Override
+    public List<SysPermission> selectAll() {
+        return sysPermissionDao.selectAll();
+    }
+
+    /**
+     * 查询全局-有条件
+     *
+     * @param condition 查询条件
+     * @return 所有数据
+     */
+    @Override
+    public List<SysPermission> selectAll(SysPermission condition) {
+        return sysPermissionDao.selectAllByCondition(condition);
+    }
+
+    /**
+     * 更新
+     *
+     * @param source 数据对象
+     * @param id     ID
+     * @return int
+     */
+    @Override
+    public int update(SysPermission source, int id) {
+        return sysPermissionDao.updateById(source, id);
+    }
+
+    /**
+     * 条件更新
+     *
+     * @param source    数据对象
+     * @param condition 更新条件
+     * @return int
+     */
+    @Override
+    public int update(SysPermission source, SysPermission condition) {
+        return sysPermissionDao.updateByCondition(source, condition);
     }
 }

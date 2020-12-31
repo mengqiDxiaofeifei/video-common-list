@@ -1,0 +1,33 @@
+{
+  "name" : "SysRolePermissionRelation",
+  "preName" : null,
+  "comment" : "角色-权限关联关系表",
+  "templateGroupName" : null,
+  "fullColumn" : [ {
+    "name" : "id",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "roleId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "permissionId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.zhou",
+  "savePath" : "./video-auth/src/main/java/com/zhou",
+  "saveModelName" : "video-auth"
+}

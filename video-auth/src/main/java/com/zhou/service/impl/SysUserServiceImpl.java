@@ -1,168 +1,169 @@
 package com.zhou.service.impl;
 
-import com.zhou.common.utils.CheckUtil;
-import com.zhou.config.service.PasswordEncoder;
-import com.zhou.dao.SendCodeDao;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zhou.dao.SysUserDao;
-import com.zhou.dao.SysUserRoleDao;
-import com.zhou.entity.SendCode;
 import com.zhou.entity.SysUser;
-import com.zhou.entity.SysUserRole;
 import com.zhou.service.SysUserService;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
-import java.util.Date;
 import java.util.List;
 
 /**
- * @Description 用户表（SysUser）表服务接口实现
- * @Author houjun
- * @Date 2020/5/12 23:14
- * @since:
- * @copyright:
+ * 系统用户表(SysUser)表服务实现类
+ *
+ * @author makejava
+ * @since 2020-12-31 10:57:46
  */
-@Service
+@Service("sysUserService")
 public class SysUserServiceImpl implements SysUserService {
 
-    @Resource
+    /**
+     * dao引入
+     */
+    @Autowired
     private SysUserDao sysUserDao;
-    @Resource
-    private SendCodeDao sendCodeDao;
-    @Resource
-    private SysUserRoleDao sysUserRoleDao;
 
-    /**
-     * 通过ID查询单条数据
-     *
-     * @param id 主键
-     * @return 实例对象
-     */
-    @Override
-    public SysUser queryById(Integer id) {
-        return this.sysUserDao.queryById(id);
-    }
 
-    /**
-     * 查询多条数据
-     *
-     * @param offset 查询起始位置
-     * @param limit  查询条数
-     * @return 对象列表
-     */
-    @Override
-    public List<SysUser> queryAllByLimit(int offset, int limit) {
-        return this.sysUserDao.queryAllByLimit(offset, limit);
-    }
+
 
     /**
      * 新增数据
      *
-     * @param sysUser 实例对象
-     * @return 实例对象
+     * @param source 数据对象
+     * @return int
      */
     @Override
-    public SysUser insert(SysUser sysUser) {
-        this.sysUserDao.insert(sysUser);
-        return sysUser;
+    public int insert(SysUser source) {
+
+        return sysUserDao.insert(source);
     }
 
     /**
-     * 修改数据
+     * 单个删除
      *
-     * @param sysUser 实例对象
-     * @return 实例对象
+     * @param id id
+     * @return int
      */
     @Override
-    public SysUser update(SysUser sysUser) {
-        this.sysUserDao.update(sysUser);
-        return this.queryById(sysUser.getId());
+    public int deleteOne(Object id) {
+        return sysUserDao.deleteOne(id);
     }
 
     /**
-     * 通过主键删除数据
+     * 删除
      *
-     * @param id 主键
-     * @return 是否成功
+     * @param condition 删除条件
+     * @return int
      */
     @Override
-    public boolean deleteById(Integer id) {
-        return this.sysUserDao.deleteById(id) > 0;
+    public int delete(SysUser condition) {
+        return sysUserDao.deleteByCondition(condition);
     }
 
+    /**
+     * 单个查询
+     *
+     * @param id id
+     * @return 对象
+     */
     @Override
-    public SysUser selectByName(String userName) {
-        return this.sysUserDao.selectByName(userName);
+    public SysUser selectOne(int id) {
+        return sysUserDao.selectOne(id);
     }
 
+    /**
+     * 单个查询
+     * 需要注意为伪单个查询，通过下标获取。注意使用场景
+     *
+     * @param condition 查询条件
+     * @return 单个对象
+     */
     @Override
-    public SysUser selectByPhone(String userName) {
-        return this.sysUserDao.selectByPhone(userName);
+    public SysUser selectOne(SysUser condition) {
+        return sysUserDao.selectAllByCondition(condition).get(0);
+    }
+
+    /**
+     * 查询全部-无条件
+     *
+     * @return 所有数据
+     */
+    @Override
+    public List<SysUser> selectAll() {
+        return sysUserDao.selectAll();
+    }
+
+    /**
+     * 查询全局-有条件
+     *
+     * @param condition 查询条件
+     * @return 所有数据
+     */
+    @Override
+    public List<SysUser> selectAll(SysUser condition) {
+        return sysUserDao.selectAllByCondition(condition);
+    }
+
+    /**
+     * 更新
+     *
+     * @param source 数据对象
+     * @param id     ID
+     * @return int
+     */
+    @Override
+    public int update(SysUser source, int id) {
+        return sysUserDao.updateById(source, id);
+    }
+
+    /**
+     * 条件更新
+     *
+     * @param source    数据对象
+     * @param condition 更新条件
+     * @return int
+     */
+    @Override
+    public int update(SysUser source, SysUser condition) {
+        return sysUserDao.updateByCondition(source, condition);
     }
 
 
     /**
-     * 校验验证码是否正确,如果正确将验证码设为失效
+     * 根据用户名查询User
      *
-     * @return
+     * @param username 用户名
+     * @return SysUser
      */
     @Override
-    public Boolean checkSmsCode(String phone, String code) {
-        //设置过期时间
-        long outTime = 10 * 60 * 1000;
-        SendCode smsCode = sendCodeDao.findByMobile(phone);
-        if (CheckUtil.isEmpty(smsCode)) {
-            return false;
-        }
-        long smsCodeTime = smsCode.getSendTime().getTime();
-        long nowTime = System.currentTimeMillis();
-        if ((nowTime - smsCodeTime) > outTime) {
-            return false;
-        }
-        if (!CheckUtil.isEmpty(smsCode) && smsCode.getCode().equals(code)) {
-            return true;
-        }
-        return false;
-
+    public SysUser selectByName(String username) {
+        return sysUserDao.selectByName(username);
     }
+
 
     /**
-     * 用户注册
+     * 根据token查询User
      *
-     * @return
+     * @param token 令牌
+     * @return SysUser
      */
     @Override
-    @Transactional(rollbackFor = Exception.class)
-    public void register(SysUser sysUser) {
-        sysUser.setUpdateTime(new Date());
-        sysUser.setAccount(sysUser.getUserName());
-        sysUser.setLastLoginTime(new Date());
-        sysUser.setCreateTime(new Date());
-        sysUser.setAccountNonExpired(true);
-        sysUser.setAccountNonLocked(true);
-        sysUser.setCredentialsNonExpired(true);
-        sysUser.setEnabled(true);
-        sysUser.setPassword(PasswordEncoder.encoder(sysUser.getPassword()));
-        sysUser = insert(sysUser);
-        //初始化角色  默认角色为普通角色
-        SysUserRole sysUserRole = new SysUserRole();
-        sysUserRole.setUserId(sysUser.getId());
-        sysUserRole.setRoleId(2);
-        sysUserRoleDao.insert(sysUserRole);
+    public SysUser selectByToken(String token) {
+        return sysUserDao.selectRoleResourceByToken(token);
     }
 
-    @Override
-    public Boolean checkPhone(String phone) {
-        SysUser sysUser = sysUserDao.selectByPhone(phone);
-        return sysUser == null ? true : false;
-    }
 
+    /**
+     * 分页查询user
+     *
+     * @param page 分页对象
+     * @param sysUser 用户
+     * @return Page<SysUser> 用户list
+     */
     @Override
-    public SysUser getUser() {
-        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return sysUserDao.selectByName(user.getUsername());
+    public Page<SysUser> getUserByPage(Page<SysUser> page, SysUser sysUser) {
+        page.setRecords(sysUserDao.getUserByPage(page,sysUser));
+        return page;
     }
 }

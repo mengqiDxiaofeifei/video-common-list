@@ -1,18 +1,22 @@
 package com.zhou.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.zhou.domain.vo.ReqPage;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
- * @version 0.1
- * @Description 用户表（sys_user）实体类
- * @Author houjun
- * @Date 2020/4/7 22:40
+ * 系统用户表(SysUser)实体类
+ *
+ * @author makejava
+ * @since 2020-12-31 10:57:44
  */
 @Data
-public class SysUser implements Serializable {
+public class SysUser extends ReqPage implements Serializable {
+    private static final long serialVersionUID = 334259366590364040L;
 
     private Integer id;
     /**
@@ -26,11 +30,8 @@ public class SysUser implements Serializable {
     /**
      * 用户密码
      */
+    @JsonIgnore
     private String password;
-    /**
-     * 手机号
-     */
-    private String phone;
     /**
      * 上一次登陆时间
      */
@@ -67,5 +68,18 @@ public class SysUser implements Serializable {
      * 修改人
      */
     private Integer updateUser;
+    /**
+     * 手机号
+     */
+    private String phone;
+    /**
+     * 令牌
+     */
+    private String token;
+
+    /**
+     * 角色
+     */
+    private List<SysRole> roles;
 
 }

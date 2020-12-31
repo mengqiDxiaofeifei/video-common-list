@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhou.dao.SysUserDao">
+
+    <!-- 列名 -->
+    <sql id="columns">id, account, user_name, password, last_login_time, enabled, account_non_expired, account_non_locked, credentials_non_expired, create_time, update_time, create_user, update_user, phone, token</sql>
+
+    <!-- 表名 -->
+    <sql id="tablename">sys_user</sql>
+
+    <!-- 插入-->
+    <insert id="insert" parameterType="com.zhou.entity.SysUser">
+        INSERT INTO
+        <include refid="tablename"/>
+        (<include refid="columns"/>)
+        VALUES(#{id,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR},
+        #{password,jdbcType=VARCHAR}, #{lastLoginTime,jdbcType=TIMESTAMP}, #{enabled,jdbcType=OTHER},
+        #{accountNonExpired,jdbcType=OTHER}, #{accountNonLocked,jdbcType=OTHER},
+        #{credentialsNonExpired,jdbcType=OTHER}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP},
+        #{createUser,jdbcType=INTEGER}, #{updateUser,jdbcType=INTEGER}, #{phone,jdbcType=VARCHAR},
+        #{token,jdbcType=VARCHAR})
+    </insert>
+
+    <!-- 单个删除 -->
+    <delete id="deleteOne" parameterType="java.lang.Object">
+        DELETE
+        <include refid="tablename"/>
+        WHERE id = #{id}
+    </delete>
+
+    <!-- 条件删除 -->
+    <delete id="deleteByCondition" parameterType="com.zhou.entity.SysUser">
+        DELETE
+        <include refid="tablename"/>
+        <where>
+            <if test="id != null">and id = #{id}</if>
+            <if test="account != null and account != ''">and account = #{account}</if>
+            <if test="userName != null and userName != ''">and user_name = #{userName}</if>
+            <if test="password != null and password != ''">and password = #{password}</if>
+            <if test="lastLoginTime != null">and last_login_time = #{lastLoginTime}</if>
+            <if test="enabled != null">and enabled = #{enabled}</if>
+            <if test="accountNonExpired != null">and account_non_expired = #{accountNonExpired}</if>
+            <if test="accountNonLocked != null">and account_non_locked = #{accountNonLocked}</if>
+            <if test="credentialsNonExpired != null">and credentials_non_expired = #{credentialsNonExpired}</if>
+            <if test="createTime != null">and create_time = #{createTime}</if>
+            <if test="updateTime != null">and update_time = #{updateTime}</if>
+            <if test="createUser != null">and create_user = #{createUser}</if>
+            <if test="updateUser != null">and update_user = #{updateUser}</if>
+            <if test="phone != null and phone != ''">and phone = #{phone}</if>
+            <if test="token != null and token != ''">and token = #{token}</if>
+        </where>
+    </delete>
+
+    <!-- 单个查询 -->
+    <select id="selectOne" parameterType="java.lang.Object" resultMap="com.zhou.dao.commonMapper.SysUserMap">
+        SELECT
+        <include refid="columns"/>
+        FROM<include refid="tablename"/>WHERE id =#{id}
+    </select>
+
+    <!-- 单个查询 -->
+    <select id="selectByName" parameterType="java.lang.Object" resultMap="com.zhou.dao.commonMapper.SysUserMap">
+        SELECT
+        <include refid="columns"/>
+        FROM<include refid="tablename"/>WHERE user_name = #{username}
+    </select>
+
+    <!-- 单个查询 -->
+    <select id="selectRoleResourceByToken" parameterType="java.lang.Object"
+            resultMap="com.zhou.dao.commonMapper.SysUserRoleMap">
+    SELECT
+	su.id,
+	su.user_name,
+	su.account,
+	su.token,
+	sr.id rid,
+	sr.role_name,
+	sr.role_code
+    FROM
+	sys_user su
+	LEFT JOIN sys_user_role_relation surr ON surr.user_id = su.id
+	LEFT JOIN sys_role sr ON sr.id = surr.role_id WHERE token = #{token}
+    </select>
+
+    <!-- 单个查询 -->
+    <select id="getUserByPage" resultMap="com.zhou.dao.commonMapper.SysUserRoleMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+        <where>
+            <if test="condition.id != null">and id = #{condition.id}</if>
+            <if test="condition.account != null and condition.account != ''">and account = #{condition.account}</if>
+            <if test="condition.userName != null and condition.userName != ''">and user_name = #{condition.userName}
+            </if>
+            <if test="condition.password != null and condition.password != ''">and password = #{condition.password}</if>
+            <if test="condition.lastLoginTime != null">and last_login_time = #{condition.lastLoginTime}</if>
+            <if test="condition.enabled != null">and enabled = #{condition.enabled}</if>
+            <if test="condition.accountNonExpired != null">and account_non_expired = #{condition.accountNonExpired}</if>
+            <if test="condition.accountNonLocked != null">and account_non_locked = #{condition.accountNonLocked}</if>
+            <if test="condition.credentialsNonExpired != null">and credentials_non_expired =
+                #{condition.credentialsNonExpired}
+            </if>
+            <if test="condition.createTime != null">and create_time = #{condition.createTime}</if>
+            <if test="condition.updateTime != null">and update_time = #{condition.updateTime}</if>
+            <if test="condition.createUser != null">and create_user = #{condition.createUser}</if>
+            <if test="condition.updateUser != null">and update_user = #{condition.updateUser}</if>
+            <if test="condition.phone != null and condition.phone != ''">and phone = #{condition.phone}</if>
+            <if test="condition.token != null and condition.token != ''">and token = #{condition.token}</if>
+        </where>
+       ORDER BY update_time desc
+    </select>
+
+    <!-- 单个条件查询 -->
+    <select id="selectOneByCondition" parameterType="com.zhou.entity.SysUser"
+            resultMap="com.zhou.dao.commonMapper.SysUserMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+        <where>
+            <if test="id != null">and id = #{id}</if>
+            <if test="account != null and account != ''">and account = #{account}</if>
+            <if test="userName != null and userName != ''">and user_name = #{userName}</if>
+            <if test="password != null and password != ''">and password = #{password}</if>
+            <if test="lastLoginTime != null">and last_login_time = #{lastLoginTime}</if>
+            <if test="enabled != null">and enabled = #{enabled}</if>
+            <if test="accountNonExpired != null">and account_non_expired = #{accountNonExpired}</if>
+            <if test="accountNonLocked != null">and account_non_locked = #{accountNonLocked}</if>
+            <if test="credentialsNonExpired != null">and credentials_non_expired = #{credentialsNonExpired}</if>
+            <if test="createTime != null">and create_time = #{createTime}</if>
+            <if test="updateTime != null">and update_time = #{updateTime}</if>
+            <if test="createUser != null">and create_user = #{createUser}</if>
+            <if test="updateUser != null">and update_user = #{updateUser}</if>
+            <if test="phone != null and phone != ''">and phone = #{phone}</if>
+            <if test="token != null and token != ''">and token = #{token}</if>
+        </where>
+    </select>
+
+    <!-- 查询全部-无条件 -->
+    <select id="selectAll" resultMap="com.zhou.dao.commonMapper.SysUserMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+    </select>
+
+    <!-- 查询全部-有条件 -->
+    <select id="selectAllByCondition" parameterType="com.zhou.entity.SysUser"
+            resultMap="com.zhou.dao.commonMapper.SysUserMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+        <where>
+            <if test="id != null">and id = #{id}</if>
+            <if test="account != null and account != ''">and account = #{account}</if>
+            <if test="userName != null and userName != ''">and user_name = #{userName}</if>
+            <if test="password != null and password != ''">and password = #{password}</if>
+            <if test="lastLoginTime != null">and last_login_time = #{lastLoginTime}</if>
+            <if test="enabled != null">and enabled = #{enabled}</if>
+            <if test="accountNonExpired != null">and account_non_expired = #{accountNonExpired}</if>
+            <if test="accountNonLocked != null">and account_non_locked = #{accountNonLocked}</if>
+            <if test="credentialsNonExpired != null">and credentials_non_expired = #{credentialsNonExpired}</if>
+            <if test="createTime != null">and create_time = #{createTime}</if>
+            <if test="updateTime != null">and update_time = #{updateTime}</if>
+            <if test="createUser != null">and create_user = #{createUser}</if>
+            <if test="updateUser != null">and update_user = #{updateUser}</if>
+            <if test="phone != null and phone != ''">and phone = #{phone}</if>
+            <if test="token != null and token != ''">and token = #{token}</if>
+        </where>
+    </select>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        UPDATE
+        <include refid="tablename"/>
+        <set>
+            <if test="source.account != null and source.account != ''">account = #{source.account},</if>
+            <if test="source.userName != null and source.userName != ''">user_name = #{source.userName},</if>
+            <if test="source.password != null and source.password != ''">password = #{source.password},</if>
+            <if test="source.lastLoginTime != null">last_login_time = #{source.lastLoginTime},</if>
+            <if test="source.enabled != null">enabled = #{source.enabled},</if>
+            <if test="source.accountNonExpired != null">account_non_expired = #{source.accountNonExpired},</if>
+            <if test="source.accountNonLocked != null">account_non_locked = #{source.accountNonLocked},</if>
+            <if test="source.credentialsNonExpired != null">credentials_non_expired = #{source.credentialsNonExpired},
+            </if>
+            <if test="source.createTime != null">create_time = #{source.createTime},</if>
+            <if test="source.updateTime != null">update_time = #{source.updateTime},</if>
+            <if test="source.createUser != null">create_user = #{source.createUser},</if>
+            <if test="source.updateUser != null">update_user = #{source.updateUser},</if>
+            <if test="source.phone != null and source.phone != ''">phone = #{source.phone},</if>
+            <if test="source.token != null and source.token != ''">token = #{source.token},</if>
+        </set>
+        WHERE id =#{id}
+    </update>
+
+    <!-- 通过条件更新 -->
+    <update id="updateByCondition">
+        UPDATE
+        <include refid="tablename"/>
+        <set>
+            <if test="source.account != null and source.account != ''">account = #{source.account},</if>
+            <if test="source.userName != null and source.userName != ''">user_name = #{source.userName},</if>
+            <if test="source.password != null and source.password != ''">password = #{source.password},</if>
+            <if test="source.lastLoginTime != null">last_login_time = #{source.lastLoginTime},</if>
+            <if test="source.enabled != null">enabled = #{source.enabled},</if>
+            <if test="source.accountNonExpired != null">account_non_expired = #{source.accountNonExpired},</if>
+            <if test="source.accountNonLocked != null">account_non_locked = #{source.accountNonLocked},</if>
+            <if test="source.credentialsNonExpired != null">credentials_non_expired = #{source.credentialsNonExpired},
+            </if>
+            <if test="source.createTime != null">create_time = #{source.createTime},</if>
+            <if test="source.updateTime != null">update_time = #{source.updateTime},</if>
+            <if test="source.createUser != null">create_user = #{source.createUser},</if>
+            <if test="source.updateUser != null">update_user = #{source.updateUser},</if>
+            <if test="source.phone != null and source.phone != ''">phone = #{source.phone},</if>
+            <if test="source.token != null and source.token != ''">token = #{source.token},</if>
+        </set>
+        <where>
+            <if test="condition.id != null">and id = #{condition.id}</if>
+            <if test="condition.account != null and condition.account != ''">and account = #{condition.account}</if>
+            <if test="condition.userName != null and condition.userName != ''">and user_name = #{condition.userName}
+            </if>
+            <if test="condition.password != null and condition.password != ''">and password = #{condition.password}</if>
+            <if test="condition.lastLoginTime != null">and last_login_time = #{condition.lastLoginTime}</if>
+            <if test="condition.enabled != null">and enabled = #{condition.enabled}</if>
+            <if test="condition.accountNonExpired != null">and account_non_expired = #{condition.accountNonExpired}</if>
+            <if test="condition.accountNonLocked != null">and account_non_locked = #{condition.accountNonLocked}</if>
+            <if test="condition.credentialsNonExpired != null">and credentials_non_expired =
+                #{condition.credentialsNonExpired}
+            </if>
+            <if test="condition.createTime != null">and create_time = #{condition.createTime}</if>
+            <if test="condition.updateTime != null">and update_time = #{condition.updateTime}</if>
+            <if test="condition.createUser != null">and create_user = #{condition.createUser}</if>
+            <if test="condition.updateUser != null">and update_user = #{condition.updateUser}</if>
+            <if test="condition.phone != null and condition.phone != ''">and phone = #{condition.phone}</if>
+            <if test="condition.token != null and condition.token != ''">and token = #{condition.token}</if>
+        </where>
+    </update>
+
+</mapper>

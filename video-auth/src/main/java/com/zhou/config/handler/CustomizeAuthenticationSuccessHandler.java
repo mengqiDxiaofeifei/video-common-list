@@ -1,9 +1,9 @@
 package com.zhou.config.handler;
 
+import cn.hutool.core.util.IdUtil;
 import com.alibaba.fastjson.JSON;
 import com.zhou.common.response.Result;
 import com.zhou.common.response.ResultTool;
-import com.zhou.config.service.UserThreadLocal;
 import com.zhou.entity.SysUser;
 import com.zhou.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +12,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -39,8 +40,12 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
         sysUser.setLastLoginTime(new Date());
         sysUser.setUpdateTime(new Date());
         sysUser.setUpdateUser(sysUser.getId());
-        sysUserService.update(sysUser);
-        Result result = ResultTool.success();
+        String token = IdUtil.randomUUID();
+        sysUser.setToken(token);
+        SysUser condition = new SysUser();
+        condition.setId(sysUser.getId());
+        sysUserService.update(sysUser,condition);
+        Result result = ResultTool.success(token);
         httpServletResponse.setContentType("text/json;charset=utf-8");
         httpServletResponse.getWriter().write(JSON.toJSONString(result));
     }

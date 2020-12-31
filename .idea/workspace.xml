@@ -1,147 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7b8b1df4-e082-4050-9a9d-590e254ce4da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/utils/CheckUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/cors/GlobalCorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/cors/OriginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/service/PasswordEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/service/UserThreadLocal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/controller/view/RouterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SendCodeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysUserRoleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SendCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysUserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SendCodeDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysUserRole.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/css/magnific-popup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/css/owl.carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/css/owl.transitions.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/css/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/js/html5shiv.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/js/jquery.ajaxchimp.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/js/jquery.magnific-popup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/js/map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/js/owl.carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/assets/js/respond.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/bg/page-header.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/bg/pattern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/bg/single-celebrity-header.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/bg/single-page-header.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/celebrity/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/celebrity/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/celebrity/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/celebrity/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/celebrity/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/celebrity/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/celebrity/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/celebrity/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/celebrity/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/celebrity/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/celebrity/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/celebrity/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/icons/app-store.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/icons/bstar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/icons/google-play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/icons/mstar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/movie-single.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/s1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/s2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/s3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/upcomming-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/upcomming-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/upcomming-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/movies/upcomming-featured.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/news/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/news/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/news/avatar1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/news/avatar2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/news/featured-news.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/news/l1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/news/l2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/news/l3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/news/l4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/news/l5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/news/l6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/news/s1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/news/s2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/news/s3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/news/single-thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/slider/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/slider/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/slider/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/slider/single-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/slider/single-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/slider/single-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/template/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/template/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/template/icon-114x114.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/template/icon-72x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/template/logo-footer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/template/logo-white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/static/images/template/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/video-db-sys_action.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/video-db-sys_action_permission_relation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/video-db-sys_permission.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/video-db-sys_resources.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/video-db-sys_resources_role_relation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/video-db-sys_role.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/video-db-sys_role_permission_relation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/video-db-sys_user.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/video-db-sys_user_role_relation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/constant/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/BaseDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysActionDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysActionPermissionRelationDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysResourcesDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysResourcesRoleRelationDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysRoleDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysRolePermissionRelationDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysUserRoleRelationDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysActionPermissionRelation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysResources.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysResourcesRoleRelation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysRolePermissionRelation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysUserRoleRelation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysActionPermissionRelationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysActionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysResourcesRoleRelationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysResourcesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysRolePermissionRelationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysRoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysUserRoleRelationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysActionPermissionRelationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysActionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysResourcesRoleRelationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysResourcesServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysRolePermissionRelationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysRoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysUserRoleRelationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/CommonMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysActionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysActionPermissionRelationMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysPermissionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysResourcesMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysResourcesRoleRelationMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysRolePermissionRelationMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysUserRoleRelationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-base/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/fff.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/response/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/response/ResultCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-base/target/classes/com/zhou/common/fff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-base/common-base.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/common-base/target/classes/com/zhou/common/response/ResultCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/common-base/target/classes/com/zhou/common/response/ResultCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeAbstractSecurityInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeAbstractSecurityInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeAccessDecisionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeAccessDecisionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeAuthenticationSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeLogoutSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeLogoutSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeFilterInvocationSecurityMetadataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeFilterInvocationSecurityMetadataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/service/UserDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/controller/upload/UploadController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/controller/video/VideoContorller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/controller/view/RouterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SendCodeDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysPermissionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysPermissionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysRequestPathDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysRequestPathPermissionRelationDao.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysUserRoleDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/VideoDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/domain/vo/ReqPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/domain/vo/ReqPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SendCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysPermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysPermission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysRequestPath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysRequestPathPermissionRelation.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysUserRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/Video.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysPermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysPermissionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysRequestPathPermissionRelationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysRequestPathService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/VideoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysPermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysPermissionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysRequestPathPermissionRelationServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysRequestPathServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/VideoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/utils/AccountUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/utils/AccountUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video-auth/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysUserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysUserDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/WebSecurityConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/WebSecurityConfig$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/handler/CustomizeAuthenticationSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/handler/CustomizeAuthenticationSuccessHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/handler/CustomizeLogoutSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/handler/CustomizeLogoutSuccessHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/dao/SysUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/dao/SysUserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/entity/SysUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/entity/SysUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/service/SysUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/service/SysUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/service/impl/SysUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/service/impl/SysUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/mapper/SysUserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/video-auth/target/classes/mapper/SysUserDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SendCodeDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysPermissionDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysRequestPathDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysRequestPathPermissionRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysUserDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysUserRole.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/src/main/resources/mapper/VideoDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/AuthApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/WebSecurityConfig$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/WebSecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/handler/CustomizeAbstractSecurityInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/handler/CustomizeAccessDecisionManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/handler/CustomizeAccessDeniedHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/handler/CustomizeAuthenticationEntryPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/handler/CustomizeAuthenticationFailureHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/handler/CustomizeAuthenticationSuccessHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/handler/CustomizeFilterInvocationSecurityMetadataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/handler/CustomizeLogoutSuccessHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/handler/CustomizeSessionInformationExpiredStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/config/service/UserDetailsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/dao/SysPermissionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/dao/SysRequestPathDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/dao/SysRequestPathPermissionRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/dao/SysUserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/entity/SysPermission.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/entity/SysRequestPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/entity/SysRequestPathPermissionRelation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/entity/SysUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/service/SysPermissionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/service/SysRequestPathPermissionRelationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/service/SysRequestPathService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/service/SysUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/service/impl/SysPermissionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/service/impl/SysRequestPathPermissionRelationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/service/impl/SysRequestPathServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/com/zhou/service/impl/SysUserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/mapper/SysPermissionDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/mapper/SysRequestPathDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/mapper/SysRequestPathPermissionRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-auth/target/classes/mapper/SysUserDao.xml" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/video-auth/target/" />
-    <ignored path="$PROJECT_DIR$/common-base/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,166 +175,6 @@
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-892528442">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="9" />
-          <entry key="html" value="5" />
-          <entry key="java" value="96" />
-          <entry key="js" value="1" />
-          <entry key="xml" value="16" />
-          <entry key="yml" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="9" />
-          <entry key="HTML" value="5" />
-          <entry key="JAVA" value="96" />
-          <entry key="JavaScript" value="1" />
-          <entry key="XML" value="16" />
-          <entry key="YAML" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="4" />
-          <entry key="java" value="1171" />
-          <entry key="xml" value="149" />
-          <entry key="yml" value="23" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="1171" />
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="SQL" value="3" />
-          <entry key="XML" value="146" />
-          <entry key="YAML" value="23" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages">
-        <counts>
-          <entry key="git.branch.create.new" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="106" column="30" selection-start-line="106" selection-start-column="30" selection-end-line="106" selection-end-column="30" />
-              <folding>
-                <element signature="e#1611#1612#0" expanded="true" />
-                <element signature="e#1694#1695#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/response/ResultCode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysUserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="92" column="12" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeAuthenticationSuccessHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/service/PasswordEncoder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysUserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysUserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="150" column="43" selection-start-line="150" selection-start-column="43" selection-end-line="150" selection-end-column="43" />
-              <folding>
-                <element signature="e#1863#1864#0" expanded="true" />
-                <element signature="e#1924#1925#0" expanded="true" />
-                <element signature="e#2185#2186#0" expanded="true" />
-                <element signature="e#2212#2213#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/common-base/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysUserDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="131" column="31" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -317,164 +182,102 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>jin_z</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>houjun</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>D:\sofware\video-common-list\video-auth</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/SecurityApplication.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/AuthApplication.java" />
-        <option value="$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/response/Result.java" />
-        <option value="$PROJECT_DIR$/video-auth/pom.xml" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/controller/view/RouterController.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/cors/OriginFilter.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/cors/GlobalCorsConfig.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SendCode.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SendCodeDao.xml" />
-        <option value="$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/utils/CheckUtil.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysUser.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/utils/EncryptUtils.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomPasswordEncoder.java" />
-        <option value="$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/utils/PasswordUtils.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/service/PasswordEncoder.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SendCodeDao.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/service/UserDetailsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysUserRoleDao.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysUserRole.xml" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysUserRole.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysUserDao.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysUserService.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/service/UserThreadLocal.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeAuthenticationSuccessHandler.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeLogoutSuccessHandler.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysUserDao.xml" />
-        <option value="$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/response/ResultCode.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysUserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/common-base/pom.xml" />
-      </list>
-    </option>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/video-auth/pom.xml" root0="SKIP_INSPECTION" />
   </component>
   <component name="JRebelWorkspace">
     <option name="jrebelEnabledAutocompile" value="true" />
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\software\maven\apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="C:\software\maven\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
+  <component name="ProjectId" id="1jGlFuKSAXrV7VOHGpNVdcD9riA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="57" />
-    <option name="y" value="30" />
-    <option name="width" value="897" />
-    <option name="height" value="499" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="video-common-list" type="b2602c69:ProjectViewProjectNode" />
-              <item name="video-common-list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="video-common-list" type="b2602c69:ProjectViewProjectNode" />
-              <item name="video-common-list" type="462c0819:PsiDirectoryNode" />
-              <item name="video-auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597731748989" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../login" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/video-auth/src/main/resources/mapper" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zhou.controller" />
+      <recent name="com.zhou.service" />
       <recent name="com.zhou.entity" />
       <recent name="com.zhou.dao" />
       <recent name="com.zhou.common.utils" />
-      <recent name="com.zhou.config.handler" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\project\video-common-list\video-auth\src\main\resources\mapper" />
       <recent name="D:\sofware\video-common-list\video-auth\src\main\resources\mapper" />
       <recent name="D:\sofware\video-common-list\video-auth\src\main\resources\templates" />
       <recent name="D:\sofware\video-common-list\video-auth\src\main\resources\static" />
       <recent name="D:\sofware\video-common-list\common-base\src\main\java\com\zhou\common\response" />
-      <recent name="D:\sofware\video-common-list\video-auth\src\main\resources" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+  <component name="RunManager" selected="Spring Boot.SecurityApplication">
+    <configuration name="AccountUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhou.utils.AccountUtils" />
+      <module name="video-auth" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhou.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VideoContorller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhou.controller.video.VideoContorller" />
+      <module name="video-auth" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhou.controller.video.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
       <module name="db" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -487,7 +290,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="db" />
       <option name="filePath" />
       <option name="vmParameters" />
@@ -528,7 +331,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AccountUtils" />
+        <item itemvalue="Application.VideoContorller" />
+      </list>
+    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -543,501 +353,123 @@
       <workItem from="1597305039522" duration="5500000" />
       <workItem from="1597379221866" duration="6272000" />
       <workItem from="1597627150566" duration="15479000" />
+      <workItem from="1603438211875" duration="1665000" />
+      <workItem from="1603674397762" duration="41000" />
+      <workItem from="1603790120219" duration="136000" />
+      <workItem from="1606116502194" duration="937000" />
+      <workItem from="1606207980355" duration="155000" />
+      <workItem from="1606211682224" duration="1040000" />
+      <workItem from="1606370273431" duration="5821000" />
+      <workItem from="1606440585163" duration="6000" />
+      <workItem from="1606459767625" duration="1799000" />
+      <workItem from="1606698626250" duration="2047000" />
+      <workItem from="1607046013209" duration="1646000" />
+      <workItem from="1607595150503" duration="82000" />
+      <workItem from="1609313122381" duration="7089000" />
+      <workItem from="1609378902586" duration="9902000" />
+      <workItem from="1609397442595" duration="2223000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35068000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39276138" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="JRebel" order="3" side_tool="true" />
-      <window_info id="Image Layers" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3602837" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.1319149" />
-      <window_info anchor="bottom" id="Problems" order="11" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" visible="true" weight="0.30496454" />
-      <window_info anchor="bottom" id="JRebel Executor" order="15" />
-      <window_info anchor="bottom" id="JRebel Console" order="16" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.3297587" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38203752" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="JRebel" order="3" side_tool="true" />
-      <window_info id="Image Layers" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="bottom" id="Problems" order="11" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="JRebel Executor" order="15" />
-      <window_info anchor="bottom" id="JRebel Console" order="16" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.3297587" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/resources/templates/full-width.html" />
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-993">
-          <caret line="12" selection-start-line="12" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.2.1.RELEASE/spring-security-web-5.2.1.RELEASE.jar!/org/springframework/security/web/access/intercept/FilterSecurityInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/cors/OriginFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="13" column="34" lean-forward="true" selection-start-column="2" selection-end-line="34" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/cors/GlobalCorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="15" column="35" lean-forward="true" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/controller/view/RouterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeAbstractSecurityInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeAccessDecisionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/utils/CheckUtil.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysRequestPathPermissionRelation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SendCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomPasswordEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.2.1.RELEASE/spring-security-core-5.2.1.RELEASE.jar!/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding>
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/utils/EncryptUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/utils/PasswordUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding>
-            <element signature="e#169#170#0" expanded="true" />
-            <element signature="e#205#206#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.2.1.RELEASE/spring-security-core-5.2.1.RELEASE.jar!/org/springframework/security/authentication/ProviderManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.2.1.RELEASE/spring-security-core-5.2.1.RELEASE.jar!/org/springframework/security/core/authority/SimpleGrantedAuthority.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysPermission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysPermissionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_77/src.zip!/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/resources/mapper/SendCodeDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysPermissionDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="81" column="30" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="81" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysPermissionServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
-          <folding>
-            <element signature="e#1828#1829#0" expanded="true" />
-            <element signature="e#1892#1893#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SendCodeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="117" selection-start-line="20" selection-start-column="117" selection-end-line="20" selection-end-column="117" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysUserRoleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysUserRole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysUserRole.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeAuthenticationEntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeFilterInvocationSecurityMetadataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeSessionInformationExpiredStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="66" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/response/ResultTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeAuthenticationFailureHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="38" column="73" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.2.1.RELEASE/spring-security-core-5.2.1.RELEASE.jar!/org/springframework/security/authentication/dao/AbstractUserDetailsAuthenticationProvider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.2.1.RELEASE/spring-security-core-5.2.1.RELEASE.jar!/org/springframework/security/authentication/dao/DaoAuthenticationProvider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="76" column="54" lean-forward="true" selection-start-line="76" selection-start-column="54" selection-end-line="76" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.2.1.RELEASE/spring-security-core-5.2.1.RELEASE.jar!/org/springframework/security/core/Authentication.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/service/UserThreadLocal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeLogoutSuccessHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/service/UserDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/handler/CustomizeAuthenticationSuccessHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/config/service/PasswordEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/SysUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="92" column="12" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/resources/mapper/SysUserDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="131" column="31" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/dao/SysUserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-base/src/main/java/com/zhou/common/response/ResultCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="106" column="30" selection-start-line="106" selection-start-column="30" selection-end-line="106" selection-end-column="30" />
-          <folding>
-            <element signature="e#1611#1612#0" expanded="true" />
-            <element signature="e#1694#1695#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/entity/SysUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-auth/src/main/java/com/zhou/service/impl/SysUserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="150" column="43" selection-start-line="150" selection-start-column="43" selection-end-line="150" selection-end-column="43" />
-          <folding>
-            <element signature="e#1863#1864#0" expanded="true" />
-            <element signature="e#1924#1925#0" expanded="true" />
-            <element signature="e#2185#2186#0" expanded="true" />
-            <element signature="e#2212#2213#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-base/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="WindowStateProjectService">
+    <state x="361" y="71" width="814" height="729" key="#Intentions" timestamp="1603438120592">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" width="814" height="729" key="#Intentions/0.0.1536.824@0.0.1536.824" timestamp="1603438120592" />
+    <state x="414" y="42" width="814" height="782" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609379534828">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="414" y="42" width="814" height="782" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1609379534828" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1609397603743">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1609397603743" />
+    <state x="499" y="188" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1609383424185">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="188" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1609383424185" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609383280623">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1609383280623" />
+    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1609379552054">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1536.824@0.0.1536.824" timestamp="1609379552054" />
+    <state x="147" y="65" key="DiffContextDialog" timestamp="1609397588337">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="147" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1609397588337" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1603438299840">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603438299840" />
+    <state width="1493" height="439" key="GridCell.Tab.0.bottom" timestamp="1609398604289">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="439" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609398604289" />
+    <state width="1493" height="439" key="GridCell.Tab.0.center" timestamp="1609398604289">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="439" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609398604289" />
+    <state width="1493" height="439" key="GridCell.Tab.0.left" timestamp="1609398604289">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="439" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609398604289" />
+    <state width="1493" height="439" key="GridCell.Tab.0.right" timestamp="1609398604289">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="439" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609398604289" />
+    <state width="1493" height="439" key="GridCell.Tab.1.bottom" timestamp="1609398604058">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="439" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609398604058" />
+    <state width="1493" height="439" key="GridCell.Tab.1.center" timestamp="1609398604058">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="439" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1609398604058" />
+    <state width="1493" height="439" key="GridCell.Tab.1.left" timestamp="1609398604058">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="439" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1609398604058" />
+    <state width="1493" height="439" key="GridCell.Tab.1.right" timestamp="1609398604058">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="439" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1609398604058" />
+    <state x="503" y="114" key="RollbackChangesDialog" timestamp="1609397589608">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="503" y="114" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1609397589608" />
+    <state x="270" y="0" key="SettingsEditor" timestamp="1606372282140">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606372282140" />
+    <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606116791731">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1606116791731" />
+    <state x="311" y="141" width="913" height="640" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1609393270049">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="311" y="141" width="913" height="640" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1609393270049" />
+    <state x="510" y="73" width="673" height="660" key="find.popup" timestamp="1609384794851">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="510" y="73" width="673" height="660" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1609384794851" />
   </component>
 </project>

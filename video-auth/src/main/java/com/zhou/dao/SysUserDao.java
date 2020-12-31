@@ -1,80 +1,42 @@
 package com.zhou.dao;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zhou.entity.SysUser;
 import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 /**
- * @Description 用户表（SysUser）表数据访问层接口
- * @Author houjun
- * @Date 2020/5/12 23:17
- * @since:
- * @copyright:
+ * 系统用户表(SysUser)表数据库访问层
+ * 该Dao为插件生成
+ *
+ * @author makejava
+ * @since 2020-12-31 10:57:45
  */
-public interface SysUserDao {
-
-    /**
-     * 通过ID查询单条数据
-     *
-     * @param id 主键
-     * @return 实例对象
-     */
-    SysUser queryById(Integer id);
-
-    /**
-     * 查询指定行数据
-     *
-     * @param offset 查询起始位置
-     * @param limit  查询条数
-     * @return 对象列表
-     */
-    List<SysUser> queryAllByLimit(@Param("offset") int offset, @Param("limit") int limit);
+public interface SysUserDao extends BaseDao<SysUser> {
 
 
     /**
-     * 通过实体作为筛选条件查询
+     * 根据用户名查询User
      *
-     * @param sysUser 实例对象
-     * @return 对象列表
+     * @param username 用户名
+     * @return SysUser
      */
-    List<SysUser> queryAll(SysUser sysUser);
+    SysUser selectByName(String username);
 
     /**
-     * 新增数据
+     * 根据token查询User
      *
-     * @param sysUser 实例对象
-     * @return 影响行数
+     * @param token 令牌
+     * @return SysUser
      */
-    int insert(SysUser sysUser);
+    SysUser selectRoleResourceByToken(String token);
 
     /**
-     * 修改数据
+     * 分页查询user
      *
-     * @param sysUser 实例对象
-     * @return 影响行数
+     * @param page 分页对象
+     * @return List<SysUser> 用户list
      */
-    int update(SysUser sysUser);
-
-    /**
-     * 通过主键删除数据
-     *
-     * @param id 主键
-     * @return 影响行数
-     */
-    int deleteById(Integer id);
-
-    /**
-     * 根据用户名查询用户
-     *
-     * @param userName
-     * @return
-     */
-    SysUser selectByName(String userName);
-    /**
-     * 根据手机号查询用户
-     *
-     * @param userName
-     * @return
-     */
-    SysUser selectByPhone(String userName);
+    List<SysUser> getUserByPage(Page<SysUser> page, @Param("condition")SysUser sysUser);
 }

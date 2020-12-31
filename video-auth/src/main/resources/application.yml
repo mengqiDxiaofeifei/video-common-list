@@ -41,8 +41,8 @@ mybatis-plus:
     cache-enabled: false
 sdk:
   tengxun:
-    accessKey:  #对象存储key
-    secretKey:  #对象存储secretKey
+    accessKey: AKIDZ7OOAf8rckhOp4TnFewyjDj015jbnagX #对象存储key
+    secretKey: lHVZsvhDTU4OcEafT1JK4VIp66qzrSws #对象存储secretKey
     bucketImg: ap-nanjing
     bucketVideo: ap-shanghai
     bucketImgName: img-1258165247

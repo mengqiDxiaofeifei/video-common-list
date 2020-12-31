@@ -5,26 +5,48 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @version 0.1
- * @Description 权限表实体
- * @Author houjun
- * @Date 2020/4/19 21:15
+ * (SysPermission)实体类
+ *
+ * @author makejava
+ * @since 2020-12-31 10:57:26
  */
 @Data
-public class SysPermission implements Serializable {
+public class SysPermission implements  Serializable {
+    private static final long serialVersionUID = -64644346370883897L;
 
-    /**
-     * 主键id
-     */
     private Integer id;
-
     /**
-     * 权限code
+     * 权限名称
      */
-    private String permissionCode;
-
+    private String name;
     /**
-     * 权限名
+     * 权限CODE
      */
-    private String permissionName;
+    private String code;
+
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
 }

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhou.dao.SysRoleDao">
+
+    <!-- 列名 -->
+    <sql id="columns">id, role_code, role_name, role_description</sql>
+
+    <!-- 表名 -->
+    <sql id="tablename">sys_role</sql>
+
+    <!-- 插入-->
+    <insert id="insert" parameterType="com.zhou.entity.SysRole">
+        INSERT INTO
+        <include refid="tablename"/>
+        (<include refid="columns"/>)
+        VALUES(#{id,jdbcType=INTEGER}, #{roleCode,jdbcType=VARCHAR}, #{roleName,jdbcType=VARCHAR},
+        #{roleDescription,jdbcType=VARCHAR})
+    </insert>
+
+    <!-- 单个删除 -->
+    <delete id="deleteOne" parameterType="java.lang.Object">
+        DELETE
+        <include refid="tablename"/>
+        WHERE id = #{id}
+    </delete>
+
+    <!-- 条件删除 -->
+    <delete id="deleteByCondition" parameterType="com.zhou.entity.SysRole">
+        DELETE
+        <include refid="tablename"/>
+        <where>
+            <if test="id != null">and id = #{id}</if>
+            <if test="roleCode != null and roleCode != ''">and role_code = #{roleCode}</if>
+            <if test="roleName != null and roleName != ''">and role_name = #{roleName}</if>
+            <if test="roleDescription != null and roleDescription != ''">and role_description = #{roleDescription}</if>
+        </where>
+    </delete>
+
+    <!-- 单个查询 -->
+    <select id="selectOne" parameterType="java.lang.Object" resultMap="com.zhou.dao.commonMapper.SysRoleMap">
+        SELECT
+        <include refid="columns"/>
+        FROM<include refid="tablename"/>WHERE id =#{id}
+    </select>
+
+    <!-- 单个条件查询 -->
+    <select id="selectOneByCondition" parameterType="com.zhou.entity.SysRole"
+            resultMap="com.zhou.dao.commonMapper.SysRoleMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+        <where>
+            <if test="id != null">and id = #{id}</if>
+            <if test="roleCode != null and roleCode != ''">and role_code = #{roleCode}</if>
+            <if test="roleName != null and roleName != ''">and role_name = #{roleName}</if>
+            <if test="roleDescription != null and roleDescription != ''">and role_description = #{roleDescription}</if>
+        </where>
+    </select>
+
+    <!-- 查询全部-无条件 -->
+    <select id="selectAll" resultMap="com.zhou.dao.commonMapper.SysRoleMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+    </select>
+
+    <!-- 查询全部-有条件 -->
+    <select id="selectAllByCondition" parameterType="com.zhou.entity.SysRole"
+            resultMap="com.zhou.dao.commonMapper.SysRoleMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+        <where>
+            <if test="id != null">and id = #{id}</if>
+            <if test="roleCode != null and roleCode != ''">and role_code = #{roleCode}</if>
+            <if test="roleName != null and roleName != ''">and role_name = #{roleName}</if>
+            <if test="roleDescription != null and roleDescription != ''">and role_description = #{roleDescription}</if>
+        </where>
+    </select>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        UPDATE
+        <include refid="tablename"/>
+        <set>
+            <if test="source.roleCode != null and source.roleCode != ''">role_code = #{source.roleCode},</if>
+            <if test="source.roleName != null and source.roleName != ''">role_name = #{source.roleName},</if>
+            <if test="source.roleDescription != null and source.roleDescription != ''">role_description =
+                #{source.roleDescription},
+            </if>
+        </set>
+        WHERE id =#{id}
+    </update>
+
+    <!-- 通过条件更新 -->
+    <update id="updateByCondition">
+        UPDATE
+        <include refid="tablename"/>
+        <set>
+            <if test="source.roleCode != null and source.roleCode != ''">role_code = #{source.roleCode},</if>
+            <if test="source.roleName != null and source.roleName != ''">role_name = #{source.roleName},</if>
+            <if test="source.roleDescription != null and source.roleDescription != ''">role_description =
+                #{source.roleDescription},
+            </if>
+        </set>
+        <where>
+            <if test="condition.id != null">and id = #{condition.id}</if>
+            <if test="condition.roleCode != null and condition.roleCode != ''">and role_code = #{condition.roleCode}
+            </if>
+            <if test="condition.roleName != null and condition.roleName != ''">and role_name = #{condition.roleName}
+            </if>
+            <if test="condition.roleDescription != null and condition.roleDescription != ''">and role_description =
+                #{condition.roleDescription}
+            </if>
+        </where>
+    </update>
+
+</mapper>

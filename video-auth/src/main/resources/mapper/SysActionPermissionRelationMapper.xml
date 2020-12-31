@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhou.dao.SysActionPermissionRelationDao">
+
+    <!-- 列名 -->
+    <sql id="columns">id, action_id, permission_id</sql>
+
+    <!-- 表名 -->
+    <sql id="tablename">sys_action_permission_relation</sql>
+
+    <!-- 插入-->
+    <insert id="insert" parameterType="com.zhou.entity.SysActionPermissionRelation">
+        INSERT INTO
+        <include refid="tablename"/>
+        (<include refid="columns"/>)
+        VALUES(#{id,jdbcType=INTEGER}, #{actionId,jdbcType=INTEGER}, #{permissionId,jdbcType=INTEGER})
+    </insert>
+
+    <!-- 单个删除 -->
+    <delete id="deleteOne" parameterType="java.lang.Object">
+        DELETE
+        <include refid="tablename"/>
+        WHERE = #{id}
+    </delete>
+
+    <!-- 条件删除 -->
+    <delete id="deleteByCondition" parameterType="com.zhou.entity.SysActionPermissionRelation">
+        DELETE
+        <include refid="tablename"/>
+        <where>
+            <if test="id != null">and id = #{id}</if>
+            <if test="actionId != null">and action_id = #{actionId}</if>
+            <if test="permissionId != null">and permission_id = #{permissionId}</if>
+        </where>
+    </delete>
+
+    <!-- 单个查询 -->
+    <select id="selectOne" parameterType="java.lang.Object"
+            resultMap="com.zhou.dao.commonMapper.SysActionPermissionRelationMap">
+        SELECT
+        <include refid="columns"/>
+        FROM<include refid="tablename"/>WHERE =#{id}
+    </select>
+
+    <!-- 单个条件查询 -->
+    <select id="selectOneByCondition" parameterType="com.zhou.entity.SysActionPermissionRelation"
+            resultMap="com.zhou.dao.commonMapper.SysActionPermissionRelationMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+        <where>
+            <if test="id != null">and id = #{id}</if>
+            <if test="actionId != null">and action_id = #{actionId}</if>
+            <if test="permissionId != null">and permission_id = #{permissionId}</if>
+        </where>
+    </select>
+
+    <!-- 查询全部-无条件 -->
+    <select id="selectAll" resultMap="com.zhou.dao.commonMapper.SysActionPermissionRelationMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+    </select>
+
+    <!-- 查询全部-有条件 -->
+    <select id="selectAllByCondition" parameterType="com.zhou.entity.SysActionPermissionRelation"
+            resultMap="com.zhou.dao.commonMapper.SysActionPermissionRelationMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+        <where>
+            <if test="id != null">and id = #{id}</if>
+            <if test="actionId != null">and action_id = #{actionId}</if>
+            <if test="permissionId != null">and permission_id = #{permissionId}</if>
+        </where>
+    </select>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        UPDATE
+        <include refid="tablename"/>
+        <set>
+            <if test="source.id != null">id = #{source.id},</if>
+            <if test="source.actionId != null">action_id = #{source.actionId},</if>
+            <if test="source.permissionId != null">permission_id = #{source.permissionId},</if>
+        </set>
+        WHERE =#{id}
+    </update>
+
+    <!-- 通过条件更新 -->
+    <update id="updateByCondition">
+        UPDATE
+        <include refid="tablename"/>
+        <set>
+            <if test="source.id != null">id = #{source.id},</if>
+            <if test="source.actionId != null">action_id = #{source.actionId},</if>
+            <if test="source.permissionId != null">permission_id = #{source.permissionId},</if>
+        </set>
+        <where>
+            <if test="condition.id != null">and id = #{condition.id}</if>
+            <if test="condition.actionId != null">and action_id = #{condition.actionId}</if>
+            <if test="condition.permissionId != null">and permission_id = #{condition.permissionId}</if>
+        </where>
+    </update>
+
+</mapper>

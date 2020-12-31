@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhou.dao.SysResourcesDao">
+
+    <!-- 列名 -->
+    <sql id="columns">id, name, url, pid, sort, create_time, update_time, remake</sql>
+
+    <!-- 表名 -->
+    <sql id="tablename">sys_resources</sql>
+
+    <!-- 插入-->
+    <insert id="insert" parameterType="com.zhou.entity.SysResources">
+        INSERT INTO
+        <include refid="tablename"/>
+        (<include refid="columns"/>)
+        VALUES(#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{pid,jdbcType=INTEGER},
+        #{sort,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP},
+        #{remake,jdbcType=VARCHAR})
+    </insert>
+
+    <!-- 单个删除 -->
+    <delete id="deleteOne" parameterType="java.lang.Object">
+        DELETE
+        <include refid="tablename"/>
+        WHERE id = #{id}
+    </delete>
+
+    <!-- 条件删除 -->
+    <delete id="deleteByCondition" parameterType="com.zhou.entity.SysResources">
+        DELETE
+        <include refid="tablename"/>
+        <where>
+            <if test="id != null">and id = #{id}</if>
+            <if test="name != null and name != ''">and name = #{name}</if>
+            <if test="url != null and url != ''">and url = #{url}</if>
+            <if test="pid != null">and pid = #{pid}</if>
+            <if test="sort != null">and sort = #{sort}</if>
+            <if test="createTime != null">and create_time = #{createTime}</if>
+            <if test="updateTime != null">and update_time = #{updateTime}</if>
+            <if test="remake != null and remake != ''">and remake = #{remake}</if>
+        </where>
+    </delete>
+
+    <!-- 单个查询 -->
+    <select id="selectOne" parameterType="java.lang.Object" resultMap="com.zhou.dao.commonMapper.SysResourcesMap">
+        SELECT
+        <include refid="columns"/>
+        FROM<include refid="tablename"/>WHERE id =#{id}
+    </select>
+
+    <!-- 单个条件查询 -->
+    <select id="selectOneByCondition" parameterType="com.zhou.entity.SysResources"
+            resultMap="com.zhou.dao.commonMapper.SysResourcesMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+        <where>
+            <if test="id != null">and id = #{id}</if>
+            <if test="name != null and name != ''">and name = #{name}</if>
+            <if test="url != null and url != ''">and url = #{url}</if>
+            <if test="pid != null">and pid = #{pid}</if>
+            <if test="sort != null">and sort = #{sort}</if>
+            <if test="createTime != null">and create_time = #{createTime}</if>
+            <if test="updateTime != null">and update_time = #{updateTime}</if>
+            <if test="remake != null and remake != ''">and remake = #{remake}</if>
+        </where>
+    </select>
+
+    <!-- 查询全部-无条件 -->
+    <select id="selectAll" resultMap="com.zhou.dao.commonMapper.SysResourcesMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+    </select>
+
+    <!-- 查询全部-有条件 -->
+    <select id="selectAllByCondition" parameterType="com.zhou.entity.SysResources"
+            resultMap="com.zhou.dao.commonMapper.SysResourcesMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+        <where>
+            <if test="id != null">and id = #{id}</if>
+            <if test="name != null and name != ''">and name = #{name}</if>
+            <if test="url != null and url != ''">and url = #{url}</if>
+            <if test="pid != null">and pid = #{pid}</if>
+            <if test="sort != null">and sort = #{sort}</if>
+            <if test="createTime != null">and create_time = #{createTime}</if>
+            <if test="updateTime != null">and update_time = #{updateTime}</if>
+            <if test="remake != null and remake != ''">and remake = #{remake}</if>
+        </where>
+    </select>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        UPDATE
+        <include refid="tablename"/>
+        <set>
+            <if test="source.name != null and source.name != ''">name = #{source.name},</if>
+            <if test="source.url != null and source.url != ''">url = #{source.url},</if>
+            <if test="source.pid != null">pid = #{source.pid},</if>
+            <if test="source.sort != null">sort = #{source.sort},</if>
+            <if test="source.createTime != null">create_time = #{source.createTime},</if>
+            <if test="source.updateTime != null">update_time = #{source.updateTime},</if>
+            <if test="source.remake != null and source.remake != ''">remake = #{source.remake},</if>
+        </set>
+        WHERE id =#{id}
+    </update>
+
+    <!-- 通过条件更新 -->
+    <update id="updateByCondition">
+        UPDATE
+        <include refid="tablename"/>
+        <set>
+            <if test="source.name != null and source.name != ''">name = #{source.name},</if>
+            <if test="source.url != null and source.url != ''">url = #{source.url},</if>
+            <if test="source.pid != null">pid = #{source.pid},</if>
+            <if test="source.sort != null">sort = #{source.sort},</if>
+            <if test="source.createTime != null">create_time = #{source.createTime},</if>
+            <if test="source.updateTime != null">update_time = #{source.updateTime},</if>
+            <if test="source.remake != null and source.remake != ''">remake = #{source.remake},</if>
+        </set>
+        <where>
+            <if test="condition.id != null">and id = #{condition.id}</if>
+            <if test="condition.name != null and condition.name != ''">and name = #{condition.name}</if>
+            <if test="condition.url != null and condition.url != ''">and url = #{condition.url}</if>
+            <if test="condition.pid != null">and pid = #{condition.pid}</if>
+            <if test="condition.sort != null">and sort = #{condition.sort}</if>
+            <if test="condition.createTime != null">and create_time = #{condition.createTime}</if>
+            <if test="condition.updateTime != null">and update_time = #{condition.updateTime}</if>
+            <if test="condition.remake != null and condition.remake != ''">and remake = #{condition.remake}</if>
+        </where>
+    </update>
+
+</mapper>

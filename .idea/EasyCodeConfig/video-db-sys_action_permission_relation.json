@@ -1,0 +1,33 @@
+{
+  "name" : "SysActionPermissionRelation",
+  "preName" : null,
+  "comment" : "路径权限关联表",
+  "templateGroupName" : null,
+  "fullColumn" : [ {
+    "name" : "id",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "actionId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "permissionId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.zhou",
+  "savePath" : "./video-auth/src/main/java/com/zhou",
+  "saveModelName" : "video-auth"
+}

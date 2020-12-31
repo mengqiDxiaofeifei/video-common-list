@@ -14,8 +14,8 @@ import javax.validation.constraints.Min;
 public class ReqPage {
 
     @Min(value = 0)
-    private Integer current;
+    private Integer page;
 
     @Min(value = 0)
-    private Integer size;
+    private Integer limit;
 }
