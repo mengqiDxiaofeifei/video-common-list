@@ -1,8 +1,10 @@
 package com.zhou.entity;
 
+import com.zhou.domain.vo.ReqPage;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 用户角色表(SysRole)实体类
@@ -11,7 +13,7 @@ import java.io.Serializable;
  * @since 2020-12-31 10:57:37
  */
 @Data
-public class SysRole implements  Serializable {
+public class SysRole extends ReqPage implements  Serializable {
     private static final long serialVersionUID = -83149921554557083L;
     /**
      * 主键id
@@ -29,5 +31,10 @@ public class SysRole implements  Serializable {
      * 角色说明
      */
     private String roleDescription;
+
+    /**
+     * [扩展]资源
+     */
+    private List<SysResources> routes;
 
 }

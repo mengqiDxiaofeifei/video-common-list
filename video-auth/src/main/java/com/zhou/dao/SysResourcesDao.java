@@ -1,6 +1,10 @@
 package com.zhou.dao;
 
 import com.zhou.entity.SysResources;
+import com.zhou.entity.SysRole;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * (SysResources)表数据库访问层
@@ -13,6 +17,11 @@ import com.zhou.entity.SysResources;
 public interface SysResourcesDao extends BaseDao<SysResources> {
 
 
+    List<SysResources> selectResource();
 
+    List<SysResources> selectChildResources();
 
+    List<SysRole> getRolesResource();
+
+    List<SysResources> selectResourceInIds(@Param("ids") List<Integer> ids);
 }

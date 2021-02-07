@@ -24,6 +24,7 @@
     <!-- 单个删除 -->
     <delete id="deleteOne" parameterType="java.lang.Object">
         DELETE
+        FROM
         <include refid="tablename"/>
         WHERE id = #{id}
     </delete>

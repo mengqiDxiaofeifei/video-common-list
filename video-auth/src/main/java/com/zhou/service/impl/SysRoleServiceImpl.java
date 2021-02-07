@@ -1,11 +1,18 @@
 package com.zhou.service.impl;
 
+import cn.hutool.core.collection.CollectionUtil;
 import com.zhou.dao.SysRoleDao;
+import com.zhou.entity.SysResources;
+import com.zhou.entity.SysResourcesRoleRelation;
 import com.zhou.entity.SysRole;
+import com.zhou.entity.SysUser;
+import com.zhou.service.SysResourcesRoleRelationService;
 import com.zhou.service.SysRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,6 +22,7 @@ import java.util.List;
  * @since 2020-12-31 10:57:39
  */
 @Service("sysRoleService")
+
 public class SysRoleServiceImpl implements SysRoleService {
 
     /**
@@ -23,7 +31,8 @@ public class SysRoleServiceImpl implements SysRoleService {
     @Autowired
     private SysRoleDao sysRoleDao;
 
-
+    @Autowired
+    private SysResourcesRoleRelationService sysResourcesRoleRelationService;
 
 
     /**
@@ -34,9 +43,30 @@ public class SysRoleServiceImpl implements SysRoleService {
      */
     @Override
     public int insert(SysRole source) {
-
         return sysRoleDao.insert(source);
     }
+
+
+    /**
+     * 新增数据
+     *
+     * @param source 数据对象
+     * @return int
+     */
+    @Override
+    public Integer insertGeneratedKeys(SysRole source) {
+        return sysRoleDao.insertGeneratedKeys(source);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void deleteRole(Integer id) {
+        this.deleteOne(id);
+        SysResourcesRoleRelation srr = new SysResourcesRoleRelation();
+        srr.setRoleId(id);
+        sysResourcesRoleRelationService.delete(srr);
+    }
+
 
     /**
      * 单个删除
@@ -126,5 +156,41 @@ public class SysRoleServiceImpl implements SysRoleService {
     @Override
     public int update(SysRole source, SysRole condition) {
         return sysRoleDao.updateByCondition(source, condition);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void addRole(SysRole sysRole) {
+        this.insertGeneratedKeys(sysRole);
+        List<SysResourcesRoleRelation> list = new ArrayList<>();
+        List<SysResources> routes = sysRole.getRoutes();
+        getResource(routes, list, sysRole.getId());
+        sysResourcesRoleRelationService.batchInsert(list);
+    }
+
+    public void getResource(List<SysResources> routes,
+                            List<SysResourcesRoleRelation> list, Integer roleId) {
+        routes.forEach(route -> {
+            SysResourcesRoleRelation relation = new SysResourcesRoleRelation();
+            relation.setRoleId(roleId);
+            relation.setResourcesId(route.getId());
+            list.add(relation);
+            if (CollectionUtil.isNotEmpty(route.getChildren())) {
+                getResource(route.getChildren(), list, roleId);
+            }
+        });
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void updateRole(Integer id,SysRole sysRole) {
+        this.update(sysRole, id);
+        SysResourcesRoleRelation srr = new SysResourcesRoleRelation();
+        srr.setRoleId(id);
+        sysResourcesRoleRelationService.delete(srr);
+        List<SysResourcesRoleRelation> list = new ArrayList<>();
+        List<SysResources> routes = sysRole.getRoutes();
+        getResource(routes, list, sysRole.getId());
+        sysResourcesRoleRelationService.batchInsert(list);
     }
 }

@@ -49,16 +49,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Resource
     CustomizeLogoutSuccessHandler logoutSuccessHandler;
 
-//    /**访问决策管理器**/
-//    @Resource
-//    CustomizeAccessDecisionManager accessDecisionManager;
-//
-//    /**实现权限拦截**/
-//    @Resource
-//    CustomizeFilterInvocationSecurityMetadataSource securityMetadataSource;
+    /**访问决策管理器**/
+    @Resource
+    CustomizeAccessDecisionManager accessDecisionManager;
+
+    /**实现权限拦截**/
+    @Resource
+    CustomizeFilterInvocationSecurityMetadataSource securityMetadataSource;
 
     @Resource
-//    private CustomizeAbstractSecurityInterceptor securityInterceptor;
+    private CustomizeAbstractSecurityInterceptor securityInterceptor;
 
     @Bean
     @Override
@@ -83,15 +83,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.cors().and().csrf().disable();
         http.authorizeRequests().
                 //antMatchers("/getUser").hasAuthority("query_user").
-                //antMatchers("/**")
-//                        withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
-//                    @Override
-//                    public <O extends FilterSecurityInterceptor> O postProcess(O o) {
-//                        o.setAccessDecisionManager(accessDecisionManager);//决策管理器
-//                        o.setSecurityMetadataSource(securityMetadataSource);//安全元数据源
-//                        return o;
-//                    }
-//                }).
+//                antMatchers("/**")
+                        withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
+                    @Override
+                    public <O extends FilterSecurityInterceptor> O postProcess(O o) {
+                        o.setAccessDecisionManager(accessDecisionManager);//决策管理器
+                        o.setSecurityMetadataSource(securityMetadataSource);//安全元数据源
+                        return o;
+                    }
+                }).
                 //登出
                 and().logout().
                 permitAll().//允许所有用户

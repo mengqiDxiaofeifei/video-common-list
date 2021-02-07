@@ -2,6 +2,8 @@ package com.zhou.service;
 
 import com.zhou.entity.SysResourcesRoleRelation;
 
+import java.util.List;
+
 /**
  * 角色-权限关联关系表(SysResourcesRoleRelation)表服务接口
  *
@@ -10,4 +12,6 @@ import com.zhou.entity.SysResourcesRoleRelation;
  */
 public interface SysResourcesRoleRelationService extends Service<SysResourcesRoleRelation> {
 
+
+    void batchInsert(List<SysResourcesRoleRelation> source);
 }

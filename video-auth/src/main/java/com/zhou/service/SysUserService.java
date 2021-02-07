@@ -35,4 +35,32 @@ public interface SysUserService extends Service<SysUser> {
      * @return Page<SysUser> 用户list
      */
     Page<SysUser> getUserByPage(Page<SysUser> page, SysUser sysUser);
+
+    /**
+     * 更新user
+     *
+     * @param sysUser 用户
+     */
+    void updateUser(SysUser sysUser);
+
+    /**
+     * 添加user
+     *
+     * @param sysUser 用户
+     */
+    void addUser(SysUser sysUser);
+
+    /**
+     * 删除user
+     *
+     * @param sysUser 用户
+     */
+    void deleteSysUser(SysUser sysUser);
+
+    /**
+     * 更新状态user
+     *
+     * @param sysUser 用户
+     */
+    void updateStatus(SysUser sysUser);
 }

@@ -19,6 +19,7 @@
     <!-- 单个删除 -->
     <delete id="deleteOne" parameterType="java.lang.Object">
         DELETE
+        FROM
         <include refid="tablename"/>
         WHERE id = #{id}
     </delete>
@@ -26,6 +27,7 @@
     <!-- 条件删除 -->
     <delete id="deleteByCondition" parameterType="com.zhou.entity.SysResourcesRoleRelation">
         DELETE
+        FROM
         <include refid="tablename"/>
         <where>
             <if test="id != null">and id = #{id}</if>

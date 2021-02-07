@@ -1,6 +1,6 @@
 package com.zhou.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.zhou.config.service.PasswordEncoder;
 import com.zhou.domain.vo.ReqPage;
 import lombok.Data;
 
@@ -30,7 +30,6 @@ public class SysUser extends ReqPage implements Serializable {
     /**
      * 用户密码
      */
-    @JsonIgnore
     private String password;
     /**
      * 上一次登陆时间
@@ -39,19 +38,19 @@ public class SysUser extends ReqPage implements Serializable {
     /**
      * 账号是否可用。默认1（可用）
      */
-    private Boolean enabled;
+    private Integer enabled;
     /**
      * 是否过期。默认1（没有过期）
      */
-    private Boolean accountNonExpired;
+    private Integer accountNonExpired;
     /**
      * 账号是否锁定。默认1（没有锁定）
      */
-    private Boolean accountNonLocked;
+    private Integer accountNonLocked;
     /**
      * 证书（密码）是否过期。默认1（没有过期）
      */
-    private Boolean credentialsNonExpired;
+    private Integer credentialsNonExpired;
     /**
      * 创建时间
      */
@@ -81,5 +80,26 @@ public class SysUser extends ReqPage implements Serializable {
      * 角色
      */
     private List<SysRole> roles;
+    /**
+     * 资源
+     */
+    private List<SysResources> routes;
 
+    /**
+     * 日志转换
+     *
+     * @param sysUser 用户
+     * @return {@link SysUser}
+     */
+    public static SysUser initSysUser(SysUser sysUser) {
+        sysUser.setPassword(PasswordEncoder.encoder(sysUser.getPassword()));
+        sysUser.setLastLoginTime(new Date());
+        sysUser.setCreateTime(new Date());
+        sysUser.setCreateTime(new Date());
+        sysUser.setEnabled(1);
+        sysUser.setAccountNonExpired(1);
+        sysUser.setAccountNonLocked(1);
+        sysUser.setCredentialsNonExpired(1);
+        return sysUser;
+    }
 }

@@ -1,12 +1,17 @@
 package com.zhou.service.impl;
 
+import cn.hutool.core.collection.CollectionUtil;
 import com.zhou.dao.SysResourcesDao;
+import com.zhou.dao.SysRoleDao;
 import com.zhou.entity.SysResources;
+import com.zhou.entity.SysRole;
 import com.zhou.service.SysResourcesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * (SysResources)表服务实现类
@@ -17,13 +22,14 @@ import java.util.List;
 @Service("sysResourcesService")
 public class SysResourcesServiceImpl implements SysResourcesService {
 
+
     /**
      * dao引入
      */
     @Autowired
     private SysResourcesDao sysResourcesDao;
-
-
+    @Autowired
+    private SysRoleDao sysRoleDao;
 
 
     /**
@@ -127,4 +133,57 @@ public class SysResourcesServiceImpl implements SysResourcesService {
     public int update(SysResources source, SysResources condition) {
         return sysResourcesDao.updateByCondition(source, condition);
     }
+
+    @Override
+    public List<SysResources> getResource() {
+        return sysResourcesDao.selectResource();
+    }
+
+    @Override
+    public List<SysRole> getRolesResource(List<Integer> rids) {
+        List<SysRole> roles = sysRoleDao.getResourceRole(rids);
+        for (SysRole role : roles) {
+            List<Integer> ids = role.getRoutes().stream().map(SysResources::getId).collect(Collectors.toList());
+            if (CollectionUtil.isNotEmpty(ids)) {
+                List<SysResources> resources = sysResourcesDao.selectResourceInIds(ids);
+                role.setRoutes(buildTree(resources));
+            }
+        }
+        return roles;
+    }
+
+    @Override
+    public List<SysResources> selectResourceInIds(List<Integer> ids) {
+        return sysResourcesDao.selectResourceInIds(ids);
+    }
+
+    @Override
+    public List<SysResources> buildTree(List<SysResources> resources) {
+        List<SysResources> result = new ArrayList<>();
+        for (SysResources resource : resources) {
+            if (0 == resource.getPid()) {
+                result.add(resource);
+            }
+            for (SysResources res : resources) {
+                if (res.getPid().equals(resource.getId())) {
+                    if (resource.getChildren() == null) {
+                        List<SysResources> child = new ArrayList<>();
+                        child.add(res);
+                        resource.setChildren(child);
+                    } else {
+                        resource.getChildren().add(res);
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public List<SysResources> selectListByPath(String requestUrl) {
+        SysResources condition = new SysResources();
+        condition.setUrl(requestUrl);
+        return sysResourcesDao.selectAllByCondition(condition);
+    }
+
 }

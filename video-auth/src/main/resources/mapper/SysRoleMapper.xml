@@ -8,8 +8,40 @@
     <!-- 表名 -->
     <sql id="tablename">sys_role</sql>
 
+
+    <resultMap type="com.zhou.entity.SysRole" id="SysRoleResourceMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="roleCode" column="role_code" jdbcType="VARCHAR"/>
+        <result property="roleName" column="role_name" jdbcType="VARCHAR"/>
+        <result property="roleDescription" column="role_description" jdbcType="VARCHAR"/>
+        <collection property="routes" ofType="com.zhou.entity.SysResources">
+            <result property="id" column="resources_id" jdbcType="INTEGER"/>
+        </collection>
+    </resultMap>
+
+    <!-- 查询全部-无条件 -->
+    <select id="getResourceRole" parameterType="java.util.List" resultMap="SysRoleResourceMap">
+    select sr.*,srrr.resources_id from sys_role sr left join sys_resources_role_relation srrr on srrr.role_id = sr.id
+        <if test="ids != null and ids.size() > 0">
+            <where>sr.id in <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">#{item}</foreach>
+            </where>
+        </if>
+    </select>
+
+
+
+
+
     <!-- 插入-->
     <insert id="insert" parameterType="com.zhou.entity.SysRole">
+        INSERT INTO
+        <include refid="tablename"/>
+        (<include refid="columns"/>)
+        VALUES(#{id,jdbcType=INTEGER}, #{roleCode,jdbcType=VARCHAR}, #{roleName,jdbcType=VARCHAR},
+        #{roleDescription,jdbcType=VARCHAR})
+    </insert>
+
+    <insert id="insertGeneratedKeys"  useGeneratedKeys="true" keyProperty="id" keyColumn="id">
         INSERT INTO
         <include refid="tablename"/>
         (<include refid="columns"/>)
@@ -20,6 +52,7 @@
     <!-- 单个删除 -->
     <delete id="deleteOne" parameterType="java.lang.Object">
         DELETE
+        FROM
         <include refid="tablename"/>
         WHERE id = #{id}
     </delete>

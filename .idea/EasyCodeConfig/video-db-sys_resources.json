@@ -1,8 +1,8 @@
 {
   "name" : "SysResources",
-  "preName" : null,
+  "preName" : "",
   "comment" : null,
-  "templateGroupName" : null,
+  "templateGroupName" : "Default",
   "fullColumn" : [ {
     "name" : "id",
     "comment" : null,

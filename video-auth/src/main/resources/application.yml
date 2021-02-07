@@ -24,7 +24,7 @@ spring:
       # 连接测试查询
       connection-test-query: SELECT 1
 server:
-  port: 8888
+  port: 8000
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
   # 实体扫描，多个package用逗号或者分号分隔
@@ -39,6 +39,7 @@ mybatis-plus:
     # 开启数据库与实体类中属性支持驼峰模式对应
     map-underscore-to-camel-case: true
     cache-enabled: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 sdk:
   tengxun:
     accessKey: AKIDZ7OOAf8rckhOp4TnFewyjDj015jbnagX #对象存储key

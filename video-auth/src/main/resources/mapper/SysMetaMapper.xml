@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhou.dao.SysMetaDao">
+    <!-- 列名 -->
+    <sql id="columns">id, title, icon</sql>
+
+    <!-- 表名 -->
+    <sql id="tablename">Sys_meta</sql>
+
+    <!-- 插入-->
+    <insert id="insert" parameterType="com.zhou.entity.SysMeta">
+        INSERT INTO
+        <include refid="tablename"/>
+        (<include refid="columns"/>)
+        VALUES(#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR})
+    </insert>
+
+    <!-- 单个删除 -->
+    <delete id="deleteOne" parameterType="java.lang.Object">
+        DELETE
+        <include refid="tablename"/>
+        WHERE id = #{id}
+    </delete>
+
+    <!-- 条件删除 -->
+    <delete id="deleteByCondition" parameterType="com.zhou.entity.SysMeta">
+        DELETE
+        <include refid="tablename"/>
+        <where>
+            <if test="id != null">and id = #{id}</if>
+            <if test="title != null and title != ''">and title = #{title}</if>
+            <if test="icon != null and icon != ''">and icon = #{icon}</if>
+        </where>
+    </delete>
+
+    <!-- 单个查询 -->
+    <select id="selectOne" parameterType="java.lang.Object" resultMap="com.zhou.dao.commonMapper.SysMetaMap">
+        SELECT
+        <include refid="columns"/>
+        FROM<include refid="tablename"/>WHERE id =#{id}
+    </select>
+
+    <!-- 单个条件查询 -->
+    <select id="selectOneByCondition" parameterType="com.zhou.entity.SysMeta"
+            resultMap="com.zhou.dao.commonMapper.SysMetaMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+        <where>
+            <if test="id != null">and id = #{id}</if>
+            <if test="title != null and title != ''">and title = #{title}</if>
+            <if test="icon != null and icon != ''">and icon = #{icon}</if>
+        </where>
+    </select>
+
+    <!-- 查询全部-无条件 -->
+    <select id="selectAll" resultMap="com.zhou.dao.commonMapper.SysMetaMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+    </select>
+
+    <!-- 查询全部-有条件 -->
+    <select id="selectAllByCondition" parameterType="com.zhou.entity.SysMeta"
+            resultMap="com.zhou.dao.commonMapper.SysMetaMap">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="tablename"/>
+        <where>
+            <if test="id != null">and id = #{id}</if>
+            <if test="title != null and title != ''">and title = #{title}</if>
+            <if test="icon != null and icon != ''">and icon = #{icon}</if>
+        </where>
+    </select>
+
+    <!-- 通过ID更新 -->
+    <update id="updateById">
+        UPDATE
+        <include refid="tablename"/>
+        <set>
+            <if test="source.title != null and source.title != ''">title = #{source.title},</if>
+            <if test="source.icon != null and source.icon != ''">icon = #{source.icon},</if>
+        </set>
+        WHERE id =#{id}
+    </update>
+
+    <!-- 通过条件更新 -->
+    <update id="updateByCondition">
+        UPDATE
+        <include refid="tablename"/>
+        <set>
+            <if test="source.title != null and source.title != ''">title = #{source.title},</if>
+            <if test="source.icon != null and source.icon != ''">icon = #{source.icon},</if>
+        </set>
+        <where>
+            <if test="condition.id != null">and id = #{condition.id}</if>
+            <if test="condition.title != null and condition.title != ''">and title = #{condition.title}</if>
+            <if test="condition.icon != null and condition.icon != ''">and icon = #{condition.icon}</if>
+        </where>
+    </update>
+
+</mapper>

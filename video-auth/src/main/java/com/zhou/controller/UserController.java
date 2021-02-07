@@ -7,10 +7,11 @@ import com.zhou.domain.bo.VideoBO;
 import com.zhou.entity.SysUser;
 import com.zhou.service.SysUserService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.PostConstruct;
 import java.security.SecureRandom;
 import java.util.Random;
 
@@ -50,6 +51,31 @@ public class UserController {
         Page<SysUser> page = new Page<>(sysUser.getPage(), sysUser.getLimit());
         Page<SysUser> result = sysUserService.getUserByPage(page,sysUser);
         return ResultTool.success(result);
+    }
+
+    @PostMapping("/user/create")
+    public Result addUser(@RequestBody SysUser sysUser) {
+        sysUserService.addUser(sysUser);
+        return ResultTool.success();
+    }
+
+
+    @PutMapping("/user/update")
+    public Result updateUser(@RequestBody SysUser sysUser) {
+        sysUserService.updateUser(sysUser);
+        return ResultTool.success();
+    }
+
+    @PutMapping("/user/updateStatus")
+    public Result updateStatus(@RequestBody SysUser sysUser) {
+        sysUserService.updateStatus(sysUser);
+        return ResultTool.success();
+    }
+
+    @DeleteMapping("/user/delete")
+    public Result deleteUser(SysUser sysUser) {
+        sysUserService.deleteSysUser(sysUser);
+        return ResultTool.success();
     }
 
 

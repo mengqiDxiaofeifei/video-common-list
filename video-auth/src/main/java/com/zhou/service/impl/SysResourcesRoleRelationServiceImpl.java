@@ -127,4 +127,9 @@ public class SysResourcesRoleRelationServiceImpl implements SysResourcesRoleRela
     public int update(SysResourcesRoleRelation source, SysResourcesRoleRelation condition) {
         return sysResourcesRoleRelationDao.updateByCondition(source, condition);
     }
+
+    @Override
+    public void batchInsert(List<SysResourcesRoleRelation> source) {
+        source.forEach(s -> sysResourcesRoleRelationDao.insert(s));
+    }
 }

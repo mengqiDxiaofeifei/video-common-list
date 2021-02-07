@@ -8,6 +8,99 @@
     <!-- 表名 -->
     <sql id="tablename">sys_resources</sql>
 
+
+    <!-- 资源 -->
+    <resultMap type="com.zhou.entity.SysResources" id="SysResourcesIconMap">
+        <result property="id" column="rid" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="url" column="url" jdbcType="VARCHAR"/>
+        <result property="pid" column="pid" jdbcType="INTEGER"/>
+        <result property="sort" column="sort" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="remake" column="remake" jdbcType="VARCHAR"/>
+        <association property="meta" javaType="com.zhou.entity.SysMeta">
+            <result property="icon" column="icon" jdbcType="VARCHAR"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+        </association>
+        <collection property="children" ofType="com.zhou.entity.SysResources" select="selectChildResources" column="id">
+
+        </collection>
+    </resultMap>
+
+    <resultMap type="com.zhou.entity.SysResources" id="SysResourcesMetaMap">
+    <result property="id" column="id" jdbcType="INTEGER"/>
+    <result property="name" column="name" jdbcType="VARCHAR"/>
+    <result property="url" column="url" jdbcType="VARCHAR"/>
+    <result property="pid" column="pid" jdbcType="INTEGER"/>
+    <result property="sort" column="sort" jdbcType="INTEGER"/>
+    <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    <result property="remake" column="remake" jdbcType="VARCHAR"/>
+    <association property="meta" javaType="com.zhou.entity.SysMeta">
+        <result property="icon" column="icon" jdbcType="VARCHAR"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+    </association>
+    </resultMap>
+
+    <resultMap type="com.zhou.entity.SysRole" id="SysRoleResourceMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="roleCode" column="role_code" jdbcType="VARCHAR"/>
+        <result property="roleName" column="role_name" jdbcType="VARCHAR"/>
+        <result property="roleDescription" column="role_description" jdbcType="VARCHAR"/>
+        <collection property="routes" ofType="com.zhou.entity.SysRole" select="selectChildResources" column="rid" >
+
+        </collection>
+    </resultMap>
+
+    <!-- 查询所有父级资源 -->
+    <select id="selectResource"  resultMap="SysResourcesIconMap">
+       select sr.id rid,sr.*,sm.title,sm.icon from sys_resources sr
+        left join sys_meta sm on sr.id = sm.id
+        where pid = 0
+    </select>
+
+    <!-- 查询子级资源 -->
+    <select id="selectChildResources"  resultMap="SysResourcesIconMap">
+       select sr.id rid,sr.*,sm.title,sm.icon from sys_resources sr
+        left join sys_meta sm on sr.id = sm.id
+        where pid = #{id}
+    </select>
+
+
+    <!-- 查询角色资源 -->
+    <select id="getRolesResource"  resultMap="SysRoleResourceMap">
+     select sr.*,sre.id rid from sys_role sr left join sys_resources_role_relation srrr on srrr.role_id = sr.id
+    left join sys_resources sre on sre.id = srrr.resources_id and sre.pid = 0
+    </select>
+
+
+    <!-- 查询角色资源 -->
+    <select id="selectResourceInIds"  parameterType="java.util.List" resultMap="SysResourcesMetaMap">
+    select sr.*,sm.title,sm.icon from sys_resources sr
+    left join sys_meta sm on sr.id = sm.id
+    <where>sr.id in <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">#{item}</foreach>
+    </where>
+    </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- 插入-->
     <insert id="insert" parameterType="com.zhou.entity.SysResources">
         INSERT INTO

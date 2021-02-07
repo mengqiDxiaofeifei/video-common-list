@@ -1,8 +1,8 @@
 {
   "name" : "SysRole",
-  "preName" : null,
+  "preName" : "",
   "comment" : "用户角色表",
-  "templateGroupName" : null,
+  "templateGroupName" : "Default",
   "fullColumn" : [ {
     "name" : "id",
     "comment" : null,
