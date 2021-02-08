@@ -2,9 +2,9 @@ package com.zhou.config.handler;
 
 import cn.hutool.core.util.IdUtil;
 import com.alibaba.fastjson.JSON;
-import com.zhou.common.response.Result;
-import com.zhou.common.response.ResultTool;
 import com.zhou.entity.SysUser;
+import com.zhou.response.Result;
+import com.zhou.response.ResultTool;
 import com.zhou.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;

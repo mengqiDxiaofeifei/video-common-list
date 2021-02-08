@@ -1,9 +1,9 @@
 package com.zhou.controller;
 
-import com.zhou.common.response.Result;
-import com.zhou.common.response.ResultTool;
 import com.zhou.entity.SysResources;
 import com.zhou.entity.SysRole;
+import com.zhou.response.Result;
+import com.zhou.response.ResultTool;
 import com.zhou.service.SysResourcesService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

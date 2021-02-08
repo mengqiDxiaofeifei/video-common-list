@@ -52,7 +52,7 @@
                 <!--这块一定要配置否则打jar的时候会说找不到主类-->
                 <configuration>
                     <fork>true</fork>
-                    <mainClass>com.DecNettyApplication</mainClass>
+                    <mainClass>com.zhou.AuthApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

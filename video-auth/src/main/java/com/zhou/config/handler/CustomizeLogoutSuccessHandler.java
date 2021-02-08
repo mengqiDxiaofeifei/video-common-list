@@ -1,9 +1,9 @@
 package com.zhou.config.handler;
 
 import com.alibaba.fastjson.JSON;
-import com.zhou.common.response.Result;
-import com.zhou.common.response.ResultTool;
 import com.zhou.config.service.UserThreadLocal;
+import com.zhou.response.Result;
+import com.zhou.response.ResultTool;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 import org.springframework.stereotype.Component;

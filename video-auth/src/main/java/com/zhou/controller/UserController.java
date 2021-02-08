@@ -1,10 +1,9 @@
 package com.zhou.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.zhou.common.response.Result;
-import com.zhou.common.response.ResultTool;
-import com.zhou.domain.bo.VideoBO;
 import com.zhou.entity.SysUser;
+import com.zhou.response.Result;
+import com.zhou.response.ResultTool;
 import com.zhou.service.SysUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Delete;

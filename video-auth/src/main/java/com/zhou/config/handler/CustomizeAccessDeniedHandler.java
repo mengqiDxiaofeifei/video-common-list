@@ -1,9 +1,9 @@
 package com.zhou.config.handler;
 
 import com.alibaba.fastjson.JSON;
-import com.zhou.common.response.Result;
-import com.zhou.common.response.ResultCode;
-import com.zhou.common.response.ResultTool;
+import com.zhou.response.Result;
+import com.zhou.response.ResultCode;
+import com.zhou.response.ResultTool;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;

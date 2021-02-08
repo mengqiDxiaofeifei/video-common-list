@@ -1,6 +1,6 @@
 package com.zhou.dao;
 
-import com.zhou.common.constant.Constants;
+import com.zhou.constant.Constants;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
